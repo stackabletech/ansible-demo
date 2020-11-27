@@ -1,0 +1,13 @@
+[Unit]
+Description=etcd
+Before=
+After=network.target
+
+[Service]
+User=root
+ExecStart=/opt/etcd-v3.4.14-linux-amd64/etcd
+Restart=on-abort
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target

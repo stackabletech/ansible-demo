@@ -1,0 +1,13 @@
+[Unit]
+Description=etcd
+Before=
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/runapiserver.sh
+Restart=on-abort
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Stackable Repo Server
+Before=
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/python -m SimpleHTTPServer
+Restart=on-abort
+StandardOutput=journal
+WorkingDirectory=/opt/stackable_repo
+
+[Install]
+WantedBy=multi-user.target

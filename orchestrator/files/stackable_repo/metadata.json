@@ -1,0 +1,37 @@
+{
+  "version": "1",
+  "parcels": {
+    "kafka": [
+      {
+        "version": "2.4",
+        "path": "kafka/kafka_2.12-2.6.0.tgz",
+        "hashes": {
+          "SHA512": "022AB51605DFFB8A0E4522DF297F02F4C5E488696520BB38DA8E8E70457C0B2696A47D7AD39A86389B747981215B385B2659AC25B3D43A6093AF13239723560D"
+        }
+      }
+    ],
+    "zookeeper": [
+      {
+        "version": "3.6.2",
+        "path": "zookeeper/apache-zookeeper-3.6.2-bin.tar.gz",
+        "hashes": {
+          "SHA512": "caff5111bb6876b7124760bc006e6fa2523efa54b99321a3c9cd8192ea0d5596abc7d70a054b1aac9b20a411407dae7611c7aba870c23bff28eb1643ba499199"
+        }
+      },
+      {
+        "version": "3.5.8",
+        "path": "zookeeper/apache-zookeeper-3.5.8-bin.tar.gz",
+        "hashes": {
+          "SHA512": "caff5111bb6876b7124760bc006e6fa2523efa54b99321a3c9cd8192ea0d5596abc7d70a054b1aac9b20a411407dae7611c7aba870c23bff28eb1643ba499199"
+        }
+      },
+      {
+        "version": "3.4.14",
+        "path": "zookeeper/zookeeper-3.4.14.tar.gz",
+        "hashes": {
+          "SHA512": "caff5111bb6876b7124760bc006e6fa2523efa54b99321a3c9cd8192ea0d5596abc7d70a054b1aac9b20a411407dae7611c7aba870c23bff28eb1643ba499199"
+        }
+      }
+    ]
+  }
+}

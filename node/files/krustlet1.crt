@@ -1,0 +1,87 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            27:ba:75:11:bf:86:75:b5:e3:60:25:e7:79:78:ac:1d
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=Stackable GmbH CA
+        Validity
+            Not Before: Nov 17 08:58:27 2020 GMT
+            Not After : Feb 20 08:58:27 2023 GMT
+        Subject: CN=krustlet1
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:d3:c4:44:ac:0c:ba:43:4e:d6:a7:c4:e1:97:02:
+                    69:a1:81:11:64:b8:5f:a3:27:e8:9f:86:0b:94:99:
+                    87:f3:d1:2a:b8:7e:be:f6:92:ca:8d:c1:54:4a:8f:
+                    ed:84:8f:72:a4:68:ac:bd:11:5f:01:be:de:3c:cd:
+                    f1:37:20:57:3e:0a:f5:b3:a7:e2:00:03:b2:9e:63:
+                    7f:e6:8b:e2:c0:78:59:aa:78:4a:4f:05:33:cf:36:
+                    92:3a:9e:dd:b2:48:36:a5:ed:7e:24:33:8e:c0:3c:
+                    e9:3e:0b:22:50:65:43:5c:b9:97:09:86:40:03:9e:
+                    8f:cc:0d:6e:57:25:99:54:86:77:0a:d2:6f:96:d6:
+                    3f:88:81:df:3e:62:a7:4d:8d:56:51:80:be:1e:74:
+                    be:2e:18:67:c7:7d:bc:06:f4:31:9f:a2:55:85:33:
+                    c8:5d:2a:47:97:99:56:33:f1:56:b9:dd:7f:24:ef:
+                    c7:33:93:e6:cb:74:87:de:12:aa:ab:e3:f7:50:d2:
+                    a1:c4:e4:75:23:bf:51:31:49:0e:1d:6e:f1:ba:d8:
+                    e1:a4:49:e7:bc:49:1b:79:cc:01:fa:c4:d8:8f:5b:
+                    36:30:da:56:40:d2:d1:8a:4f:c5:ca:ad:94:1b:e3:
+                    48:f0:d1:8d:db:f6:02:ac:b7:c8:0c:f3:78:50:57:
+                    e2:6d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                E1:BD:00:2D:DD:A4:F3:91:26:83:66:22:8F:93:9E:51:63:69:09:C5
+            X509v3 Authority Key Identifier: 
+                keyid:05:E1:F0:CF:76:4E:AD:8F:74:4E:E0:DE:34:F2:A8:45:4D:B0:4E:4D
+                DirName:/CN=Stackable GmbH CA
+                serial:1E:D4:1B:FA:CE:54:8A:90:80:A6:9C:A0:B4:F7:13:57:EC:C7:35:40
+
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name: 
+                DNS:krustlet1
+    Signature Algorithm: sha256WithRSAEncryption
+         9e:38:bf:0b:0d:91:0c:1e:7e:54:46:91:ab:bc:cb:51:ef:52:
+         d6:cf:69:32:1f:92:77:c2:d3:13:77:19:f5:be:88:50:54:a8:
+         e1:56:ca:df:04:b9:8d:40:55:64:4d:49:1d:dd:49:94:79:32:
+         50:c2:c4:f4:00:ea:ba:b1:0a:3a:ed:55:8e:01:0a:13:ff:94:
+         35:10:5b:35:ef:ae:b6:c1:41:83:89:e1:cb:d7:aa:1e:99:66:
+         ec:71:53:5c:e2:30:13:8e:dc:a1:de:90:5b:7b:fb:3e:76:08:
+         fc:ec:f1:aa:88:85:64:c6:2c:f0:18:72:b1:c7:92:4b:f1:a3:
+         e8:07:f7:eb:9f:cc:cb:68:f0:3d:da:26:7a:79:a3:d4:8f:90:
+         50:34:da:41:28:d3:5d:62:5e:2d:ec:dd:ac:47:17:be:5e:43:
+         2c:3b:47:d3:c0:9e:b8:da:1d:fa:4c:3c:63:14:73:ad:13:fd:
+         47:25:5e:bb:04:61:44:5f:12:42:17:1b:24:a3:00:bb:00:68:
+         ec:96:9b:4b:1c:d7:7e:f5:ce:3c:6d:d9:8a:83:05:b2:35:74:
+         22:22:28:bc:55:40:78:f3:94:5d:8b:a5:94:73:0b:0b:66:82:
+         db:cd:73:0d:67:d7:8b:07:c8:7c:23:67:10:e0:58:5b:2d:39:
+         be:82:ce:66
+-----BEGIN CERTIFICATE-----
+MIIDgzCCAmugAwIBAgIQJ7p1Eb+GdbXjYCXneXisHTANBgkqhkiG9w0BAQsFADAc
+MRowGAYDVQQDDBFTdGFja2FibGUgR21iSCBDQTAeFw0yMDExMTcwODU4MjdaFw0y
+MzAyMjAwODU4MjdaMBQxEjAQBgNVBAMMCWtydXN0bGV0MTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBANPERKwMukNO1qfE4ZcCaaGBEWS4X6Mn6J+GC5SZ
+h/PRKrh+vvaSyo3BVEqP7YSPcqRorL0RXwG+3jzN8TcgVz4K9bOn4gADsp5jf+aL
+4sB4Wap4Sk8FM882kjqe3bJINqXtfiQzjsA86T4LIlBlQ1y5lwmGQAOej8wNblcl
+mVSGdwrSb5bWP4iB3z5ip02NVlGAvh50vi4YZ8d9vAb0MZ+iVYUzyF0qR5eZVjPx
+VrndfyTvxzOT5st0h94Sqqvj91DSocTkdSO/UTFJDh1u8brY4aRJ57xJG3nMAfrE
+2I9bNjDaVkDS0YpPxcqtlBvjSPDRjdv2Aqy3yAzzeFBX4m0CAwEAAaOByDCBxTAJ
+BgNVHRMEAjAAMB0GA1UdDgQWBBThvQAt3aTzkSaDZiKPk55RY2kJxTBXBgNVHSME
+UDBOgBQF4fDPdk6tj3RO4N408qhFTbBOTaEgpB4wHDEaMBgGA1UEAwwRU3RhY2th
+YmxlIEdtYkggQ0GCFB7UG/rOVIqQgKacoLT3E1fsxzVAMB0GA1UdJQQWMBQGCCsG
+AQUFBwMBBggrBgEFBQcDAjALBgNVHQ8EBAMCBaAwFAYDVR0RBA0wC4IJa3J1c3Rs
+ZXQxMA0GCSqGSIb3DQEBCwUAA4IBAQCeOL8LDZEMHn5URpGrvMtR71LWz2kyH5J3
+wtMTdxn1vohQVKjhVsrfBLmNQFVkTUkd3UmUeTJQwsT0AOq6sQo67VWOAQoT/5Q1
+EFs17662wUGDieHL16oemWbscVNc4jATjtyh3pBbe/s+dgj87PGqiIVkxizwGHKx
+x5JL8aPoB/frn8zLaPA92iZ6eaPUj5BQNNpBKNNdYl4t7N2sRxe+XkMsO0fTwJ64
+2h36TDxjFHOtE/1HJV67BGFEXxJCFxskowC7AGjslptLHNd+9c48bdmKgwWyNXQi
+Iii8VUB485Rdi6WUcwsLZoLbzXMNZ9eLB8h8I2cQ4FhbLTm+gs5m
+-----END CERTIFICATE-----

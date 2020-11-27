@@ -1,0 +1,20 @@
+apiVersion: v1
+clusters:
+- cluster:
+    server: http://10.9.164.11:8080
+    insecure-skip-tls-verify: true
+  name: stackable
+contexts:
+- context:
+    cluster: "stackable"
+    user: cluster-admin
+    namespace: default
+  name: stackable
+current-context: "stackable"
+kind: Config
+preferences: {}
+users:
+- name: cluster-admin
+  user:
+    password: geheim
+    username: sliebau

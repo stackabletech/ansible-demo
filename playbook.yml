@@ -1,0 +1,10 @@
+---
+- hosts: orchestrator
+  roles:
+    - { role: orchestrator, tags: "orchestrator" }
+  become: yes
+  become_user: root
+
+- hosts: nodes
+  roles:
+    - {role: node, tags: "node"}

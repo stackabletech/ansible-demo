@@ -1,0 +1,81 @@
+---
+- name: Install necessary packages
+  yum:
+    name: ["git", "maven2", "java-11-openjdk-devel", "gcc", "cmake", "openssl-devel"]
+    state: present
+
+- name: Create kubeconfig directory
+  file:
+    path: "/root/.kube"
+    mode: 0600
+    owner: root
+    group: root
+    state: directory
+
+- name: Create kubeconfig
+  template:
+    src: config.j2
+    dest: "/root/.kube/config"
+
+- name: Create Agent directory
+  file:
+    path: "/opt/stackable-agent/"
+    mode: 0644
+    owner: root
+    group: root
+    state: directory
+
+- name: Download agent
+  get_url:
+    url: http://monitoring.stackable.demo:8000/stackable-agent
+    dest: /opt/stackable-agent/
+    mode: '0755'
+
+- name: Create Work directory
+  file:
+    path: "/opt/stackable-work/"
+    mode: 0644
+    owner: root
+    group: root
+    state: directory
+
+- name: Create agent service
+  template:
+    src: agent.service.j2
+    dest: "/etc/systemd/system/agent.service"
+
+- name: Create agent config directory
+  file:
+    path: "/etc/stackable-agent"
+    mode: 0644
+    owner: root
+    group: root
+    state: directory
+
+- name: Create agent ssl directory
+  file:
+    path: "/etc/stackable-agent/ssl"
+    mode: 0644
+    owner: root
+    group: root
+    state: directory
+
+- name: Copy certs
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/stackable-agent/ssl/{{ item }}"
+  with_items:
+    - pkcs8.key
+    - krustlet1.crt
+
+- name: Create agent config
+  template:
+    src: agent_config.j2
+    dest: "/etc/stackable-agent/config"
+
+- name: Start & enable agent service
+  systemd:
+    name: agent
+    state: started
+    enabled: true
+    daemon_reload: yes

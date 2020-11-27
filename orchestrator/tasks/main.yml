@@ -1,0 +1,95 @@
+---
+- name: Create kubeconfig directory
+  file:
+    path: "/root/.kube"
+    mode: 0600
+    owner: root
+    group: root
+    state: directory
+
+- name: Create kubeconfig
+  template:
+    src: config.j2
+    dest: "/root/.kube/config"
+
+- name: Download and extract etcd server components
+  unarchive:
+    src: https://github.com/etcd-io/etcd/releases/download/v3.4.14/etcd-v3.4.14-linux-amd64.tar.gz
+    dest: /opt/
+    remote_src: yes
+
+- name: Create etcd service
+  template:
+    src: etcd.service.j2
+    dest: "/etc/systemd/system/etcd.service"
+
+- name: Download and extract kubernetes server components
+  unarchive:
+    src: https://dl.k8s.io/v1.18.12/kubernetes-server-linux-amd64.tar.gz
+    dest: /opt/
+    remote_src: yes
+
+- name: Create apiserver run script
+  copy:
+    src: "runapiserver.sh"
+    dest: "/usr/local/bin/runapiserver.sh"
+    mode: 0755
+
+- name: Create apiserver service
+  template:
+    src: apiserver.service.j2
+    dest: "/etc/systemd/system/apiserver.service"
+
+- name: Create scheduler service
+  template:
+    src: scheduler.service.j2
+    dest: "/etc/systemd/system/scheduler.service"
+
+- name: Create Zookeeper operator directory
+  file:
+    path: "/opt/zookeeper-operator/"
+    mode: 0644
+    owner: root
+    group: root
+    state: directory
+
+- name: Create Zookeeper operator service
+  template:
+    src: zk-operator.service.j2
+    dest: "/etc/systemd/system/zk-operator.service"
+
+- name: Create Kafka operator directory
+  file:
+    path: "/opt/kafka-operator/"
+    mode: 0644
+    owner: root
+    group: root
+    state: directory
+
+- name: Create Kafka operator service
+  template:
+    src: zk-operator.service.j2
+    dest: "/etc/systemd/system/kafka-operator.service"
+
+- name: Create repo service
+  template:
+    src: repo.service.j2
+    dest: "/etc/systemd/system/repo.service"
+
+- name: Start & enable services
+  systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+    daemon_reload: yes
+  with_items:
+    - etcd
+    - apiserver
+    - scheduler
+    - repo
+    - zk-operator
+
+- name: Copy repo files
+  copy:
+    src: "stackable_repo"
+    dest: "/opt/"

@@ -1,0 +1,13 @@
+[Unit]
+Description=K8S scheduler
+Before=
+After=network.target
+
+[Service]
+User=root
+ExecStart=/opt/kubernetes/server/bin/kube-scheduler --kubeconfig /root/.kube/config
+Restart=on-abort
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
